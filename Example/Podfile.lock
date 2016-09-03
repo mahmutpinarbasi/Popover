@@ -6,9 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Popover:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Popover: e64ef6d6f6e98c1c5c5aceedf1d1b9e6fd7375d7
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: c6b7494ec0f06ffe6b9d59cc7f3d1cf8ecbb4b25
+
+COCOAPODS: 1.0.1

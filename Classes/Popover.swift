@@ -36,7 +36,7 @@ public class Popover: UIView {
   public var popoverType: PopoverType = .down
   public var blackOverlayColor: UIColor = UIColor(white: 0.0, alpha: 0.2)
   public var overlayBlur: UIBlurEffect?
-  public var popoverColor: UIColor = UIColor.white()
+  public var popoverColor: UIColor = UIColor.white
 
   // custom closure
   private var didShowHandler: (() -> ())?
@@ -50,19 +50,19 @@ public class Popover: UIView {
 
   public init() {
     super.init(frame: CGRect.zero)
-    self.backgroundColor = UIColor.clear()
+    self.backgroundColor = UIColor.clear
   }
 
   public init(showHandler: (() -> ())?, dismissHandler: (() -> ())?) {
     super.init(frame: CGRect.zero)
-    self.backgroundColor = UIColor.clear()
+    self.backgroundColor = UIColor.clear
     self.didShowHandler = showHandler
     self.didDismissHandler = dismissHandler
   }
 
   public init(options: [PopoverOption]?, showHandler: (() -> ())? = nil, dismissHandler: (() -> ())? = nil) {
     super.init(frame: CGRect.zero)
-    self.backgroundColor = UIColor.clear()
+    self.backgroundColor = UIColor.clear
     self.setOptions(options)
     self.didShowHandler = showHandler
     self.didDismissHandler = dismissHandler
@@ -140,7 +140,7 @@ public class Popover: UIView {
   }
 
   public func show(_ contentView: UIView, fromView: UIView) {
-    self.show(contentView, fromView: fromView, inView: UIApplication.shared().keyWindow!)
+    self.show(contentView, fromView: fromView, inView: UIApplication.shared.keyWindow!)
   }
 
   public func show(_ contentView: UIView, fromView: UIView, inView: UIView) {
@@ -155,7 +155,7 @@ public class Popover: UIView {
   }
 
   public func show(_ contentView: UIView, point: CGPoint) {
-    self.show(contentView, point: point, inView: UIApplication.shared().keyWindow!)
+    self.show(contentView, point: point, inView: UIApplication.shared.keyWindow!)
   }
 
   public func show(_ contentView: UIView, point: CGPoint, inView: UIView) {
@@ -177,7 +177,7 @@ public class Popover: UIView {
 
     self.containerView = inView
     self.contentView = contentView
-    self.contentView.backgroundColor = UIColor.clear()
+    self.contentView.backgroundColor = UIColor.clear
     self.contentView.layer.cornerRadius = self.cornerRadius
     self.contentView.layer.masksToBounds = true
     self.arrowShowPoint = point
